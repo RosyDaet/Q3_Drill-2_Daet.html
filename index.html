@@ -9,7 +9,7 @@
 
     <style>
         body {
-            background-color: #ffffff;
+            background-color: #e6edf3;
             color: rgb(0, 0, 0);
         }
 
@@ -18,9 +18,8 @@
             border-radius: 10px;
         }
 
-        /* Instruction box */
         .text-box {
-            background-color: #040f4f;
+            background-color: #1797EE;
             color: white;
             padding: 15px 20px;
             border-radius: 8px;
@@ -29,27 +28,45 @@
         }
 
         .form-box {
-            background-color: #093270;
+            background-color: #1797EE;
+            color: white;
             padding: 25px;
             border-radius: 10px;
             max-width: 500px;
             margin: 0 auto;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
+
+        .form-box .form-control {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .form-box .form-control::placeholder {
+            color: #dddddd;
+        }
+
+        .form-box .btn {
+            color: white;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container bg-danger py-3 rounded">
-        <h1 class="fst-italic text-center text-white" id="he1"></h1>
+        <h1 class="fst-italic text-center text-white" id="he1">hi</h1>
     </div>
 
     <script>
-        let h = "CALCULATOR";
+        let h = "CALCULATOR VERSION 2";
         document.getElementById("he1").innerHTML = h;
     </script>
 
     <div class="container-fluid text-center mt-4">
+
+        <h2 class="mt-4">Instructions</h2>
 
         <div class="text-box">
             <details ontoggle="showMessage()">
@@ -59,6 +76,8 @@
                 </p>
             </details>
         </div>
+
+        <h2 class="mt-4">Calculator</h2>
 
         <div class="form-box">
             <form onsubmit="calculate(); return false;">
